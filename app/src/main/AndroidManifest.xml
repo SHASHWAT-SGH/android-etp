@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ETPPractice"
+        tools:targetApi="31">
+        <activity
+            android:name=".unit2.JobScheduleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit4.CustomViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit6.DrawerNavigatorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit6.SwipeViewsWithTabsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit5.ExternalDetails"
+            android:exported="true" />
+        <activity
+            android:name=".unit5.ExternalStorageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit5.InternalStorageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit5.SharedPreferenceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit3.TimePickerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit3.DatePickerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit3.DataPassingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit3.DynamicFragmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit3.StaticFragmentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit2.AlarmActivity"
+            android:exported="true" />
+        <activity
+            android:name=".unit2.NotificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".unit2.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".unit2.MyJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+
+</manifest>
