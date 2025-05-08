@@ -25,6 +25,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Show Text" />
+
+    <com.example.etppractice.unit4.CustomEditText2
+
+        android:id="@+id/customEditText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your text here"
+        android:padding="12dp"
+        />
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
